@@ -7,4 +7,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.22">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Moodle.Application\Moodle.Application.csproj" />
+    <ProjectReference Include="..\Moodle.Domain\Moodle.Domain.csproj" />
+    <ProjectReference Include="..\Moodle.Infrastructure\Moodle.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -28,7 +28,7 @@ services.AddScoped<MainMenuUI>();
 services.AddScoped<StudentUI>();
 services.AddScoped<ProfessorUI>();
 services.AddScoped<AdminUI>();
-//services.AddScoped<ChatUI>();
+services.AddScoped<ChatUI>();
 
 var serviceProvider = services.BuildServiceProvider();
 

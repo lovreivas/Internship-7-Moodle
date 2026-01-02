@@ -8,18 +8,18 @@ public class MainMenuUI
     private readonly StudentUI _studentUI;
     private readonly ProfessorUI _professorUI;
     private readonly AdminUI _adminUI;
-    //private readonly ChatUI _chatUI;
+    private readonly ChatUI _chatUI;
 
     public MainMenuUI(
         StudentUI studentUI,
         ProfessorUI professorUI,
-        AdminUI adminUI)
-        //ChatUI chatUI)
+        AdminUI adminUI,
+        ChatUI chatUI)
     {
         _studentUI = studentUI;
         _professorUI = professorUI;
         _adminUI = adminUI;
-       // _chatUI = chatUI;
+        _chatUI = chatUI;
     }
 
     public async Task ShowAsync(User user)
@@ -88,7 +88,7 @@ public class MainMenuUI
                     await _adminUI.ShowManageUsersAsync(user);
                     break;
                 case "Private Chat":
-                    //await _chatUI.ShowChatMenuAsync(user);
+                    await _chatUI.ShowChatMenuAsync(user);
                     break;
                 case "Logout":
                     return;
